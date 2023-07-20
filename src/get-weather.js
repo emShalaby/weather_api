@@ -14,14 +14,16 @@ export async function getData(cityName) {
   const tempC = responseData.current.condition.temp_c;
   const tempF = responseData.current.condition.temp_f;
   console.log(country);
-  return {
-    country,
-    city,
-    localTime,
-    description,
-    icon,
-    humidity,
-    tempC,
-    tempF,
-  };
+  return new Promise((resolve, reject) => {
+    resolve({
+      country,
+      city,
+      localTime,
+      description,
+      icon,
+      humidity,
+      tempC,
+      tempF,
+    });
+  });
 }
