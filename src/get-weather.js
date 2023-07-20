@@ -5,4 +5,22 @@ export async function getData(cityName) {
   );
   const responseData = await response.json();
   console.log(responseData);
+  const country = responseData.location.country;
+  const city = responseData.location.name;
+  const localTime = responseData.location.localtime;
+  const description = responseData.condition.text;
+  const icon = responseData.condition.icon;
+  const humidity = responseData.condition.humidity;
+  const tempC = responseData.condiiton.temp_c;
+  const tempF = responseData.condition.temp_f;
+  return {
+    country,
+    city,
+    localTime,
+    description,
+    icon,
+    humidity,
+    tempC,
+    tempF,
+  };
 }
