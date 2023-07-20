@@ -8,11 +8,12 @@ export async function getData(cityName) {
   const country = responseData.location.country;
   const city = responseData.location.name;
   const localTime = responseData.location.localtime;
-  const description = responseData.condition.text;
-  const icon = responseData.condition.icon;
-  const humidity = responseData.condition.humidity;
-  const tempC = responseData.condiiton.temp_c;
-  const tempF = responseData.condition.temp_f;
+  const description = responseData.current.condition.text;
+  const icon = responseData.current.condition.icon;
+  const humidity = responseData.current.condition.humidity;
+  const tempC = responseData.current.condition.temp_c;
+  const tempF = responseData.current.condition.temp_f;
+  console.log(country);
   return {
     country,
     city,
