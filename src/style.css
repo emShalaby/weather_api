@@ -1,11 +1,16 @@
+*{
+    
+
+}
 body{
 
     background-image: url("./bg.png");
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
 }
+p{
+    color: white;
+}
 #search{
-    position: absolute;
-    top: 30%;
-    left: 38%;
+
 }

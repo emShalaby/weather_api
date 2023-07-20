@@ -10,9 +10,9 @@ export async function getData(cityName) {
   const localTime = responseData.location.localtime;
   const description = responseData.current.condition.text;
   const icon = responseData.current.condition.icon;
-  const humidity = responseData.current.condition.humidity;
-  const tempC = responseData.current.condition.temp_c;
-  const tempF = responseData.current.condition.temp_f;
+  const humidity = responseData.current.humidity;
+  const tempC = responseData.current.temp_c;
+  const tempF = responseData.current.temp_f;
   console.log(country);
   return new Promise((resolve, reject) => {
     resolve({
